@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111418">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>TableBot Web</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="conn">
+      <span id="dot" class="dot"></span>
+      <div class="conn-text">
+        <div id="status" class="status">Not connected</div>
+        <div id="sub" class="sub"></div>
+      </div>
+    </div>
+    <button id="connectBtn" class="btn primary">Connect</button>
+  </header>
+
+  <div id="unsupported" class="banner" hidden>
+    This browser can't use Bluetooth. On iPhone, open this page in the free <b>Bluefy</b> app —
+    Safari and Chrome for iOS don't support Web Bluetooth.
+  </div>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="drills">Drills</button>
+    <button class="tab" data-tab="custom">Custom</button>
+    <button class="tab" data-tab="settings">Settings</button>
+  </nav>
+
+  <main>
+    <!-- Drill library -->
+    <section id="tab-drills" class="panel">
+      <input id="search" class="search" type="search" placeholder="Search drills" autocomplete="off">
+      <div class="seg" id="kindFilter">
+        <button data-v="all" class="on">All</button>
+        <button data-v="basic">Basic</button>
+        <button data-v="advanced">Advanced</button>
+      </div>
+      <ul id="drillList" class="list"></ul>
+    </section>
+
+    <!-- Custom basic drill -->
+    <section id="tab-custom" class="panel" hidden>
+      <label class="lbl">Ball</label>
+      <div class="seg" id="cBall"></div>
+      <label class="lbl">Spin</label>
+      <div class="seg wrap" id="cSpin"></div>
+      <label class="lbl">Power</label>
+      <div class="seg" id="cPower"></div>
+      <label class="lbl">Mode</label>
+      <div class="seg" id="cMode"></div>
+      <p id="cModeHint" class="hint"></p>
+      <label class="lbl">Positions <span class="hint" id="cGridHint"></span></label>
+      <div class="grid-wrap">
+        <div class="net">NET · robot side</div>
+        <div id="cGrid" class="grid"></div>
+        <div class="net">you</div>
+      </div>
+      <label class="lbl">Ball interval <span id="cTimeVal" class="val"></span></label>
+      <input id="cTime" type="range" min="1" max="20" step="1">
+      <div id="cPlayMode"></div>
+      <div class="row">
+        <button id="cTest" class="btn">Test one ball</button>
+        <button id="cPlay" class="btn primary grow">Play</button>
+      </div>
+    </section>
+
+    <!-- Settings / diagnostics -->
+    <section id="tab-settings" class="panel" hidden>
+      <label class="lbl">Idle stop command</label>
+      <div class="seg" id="sType">
+        <button data-v="V2">V2 (0x05)</button>
+        <button data-v="V1">V1 (0x99)</button>
+      </div>
+      <p class="hint">Sent before each drill to clear the previous one. The running-drill STOP button always sends 0x03.</p>
+      <label class="lbl">Write chunk size</label>
+      <div class="seg" id="sChunk">
+        <button data-v="10">10 bytes</button>
+        <button data-v="20">20 bytes</button>
+      </div>
+      <label class="lbl">Delay before discovery</label>
+      <div class="seg" id="sSettle">
+        <button data-v="0">None</button>
+        <button data-v="600">600 ms</button>
+        <button data-v="1000">1 s</button>
+      </div>
+      <p class="hint">Defaults match the Android app (10 bytes, 600 ms). Changes apply on the next connect.</p>
+      <label class="lbl">Log</label>
+      <div class="row">
+        <button id="copyLog" class="btn">Copy log</button>
+        <button id="clearLog" class="btn">Clear</button>
+      </div>
+      <pre id="log" class="log"></pre>
+      <p class="hint" id="version"></p>
+    </section>
+  </main>
+
+  <!-- Drill detail sheet -->
+  <div id="sheet" class="sheet" hidden>
+    <div class="sheet-body">
+      <div class="sheet-head">
+        <h2 id="dName"></h2>
+        <button id="dClose" class="btn ghost" aria-label="Close">✕</button>
+      </div>
+      <div id="dMeta" class="meta"></div>
+      <div id="dBody"></div>
+      <div id="dPlayMode"></div>
+      <button id="dPlay" class="btn primary block">Play</button>
+    </div>
+  </div>
+
+  <!-- Always reachable while a drill runs -->
+  <div id="stopBar" class="stopbar" hidden>
+    <div id="nowPlaying" class="now"></div>
+    <button id="stopBtn" class="btn stop">STOP</button>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

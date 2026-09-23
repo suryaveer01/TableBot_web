@@ -1,0 +1,3964 @@
+[
+  {
+    "id": 123,
+    "name": "BH Push, BH Loop",
+    "repeatNum": 10,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 0,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 7,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 1,
+      "skillLevel": "Beginner"
+    },
+    "tags": [
+      "Backhand",
+      "Push",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 122,
+    "name": "FH Push, FH Loop",
+    "repeatNum": 10,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 0,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 9,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 1,
+      "skillLevel": "Beginner"
+    },
+    "tags": [
+      "Forehand",
+      "Push",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 121,
+    "name": "BH Flick, BH Drive",
+    "repeatNum": 14,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 2,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 4,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 1,
+      "skillLevel": "Beginner"
+    },
+    "tags": [
+      "Backhand",
+      "Flick"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 120,
+    "name": "FH Flick, FH Drive",
+    "repeatNum": 10,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 2,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 4,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 1,
+      "skillLevel": "Beginner"
+    },
+    "tags": [
+      "Flick",
+      "Forehand"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 119,
+    "name": "BH Loop, FH Drive",
+    "repeatNum": 14,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 1,
+      "skillLevel": "Beginner"
+    },
+    "tags": [
+      "Footwork",
+      "Transition",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 118,
+    "name": "FH Loop, BH Drive",
+    "repeatNum": 10,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 1,
+      "skillLevel": "Beginner"
+    },
+    "tags": [
+      "Footwork",
+      "Transition",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 117,
+    "name": "BH Loop, BH Drive",
+    "repeatNum": 10,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 1,
+      "skillLevel": "Beginner"
+    },
+    "tags": [
+      "Backhand",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 116,
+    "name": "FH Loop, FH Drive",
+    "repeatNum": 10,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 3,
+        "ballTime": 14,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 1,
+      "skillLevel": "Beginner"
+    },
+    "tags": [
+      "Forehand",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 1,
+    "name": "Default Pattern",
+    "repeatNum": 2,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 0,
+        "spin": 2,
+        "power": 2,
+        "ballTime": 9,
+        "balls": [
+          {
+            "x": 8,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 9,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": true
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 9,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": true
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 1,
+      "skillLevel": "Beginner"
+    },
+    "tags": [
+      "Footwork",
+      "Random"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 139,
+    "name": "FH Flick, Random FH 2/3",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 5,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 14,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 13,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Flick",
+      "Footwork",
+      "Forehand",
+      "Random"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 138,
+    "name": "BH Flick, BH Drive",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 2,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Backhand",
+      "Flick"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 137,
+    "name": "BH Triangle Drill",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 3,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Footwork",
+      "Transition"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 136,
+    "name": "FH Triangle Drill",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 3,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Footwork",
+      "Transition"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 135,
+    "name": "Half Long 2/3 FH Loop",
+    "repeatNum": 15,
+    "repeatDelay": 0,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 6,
+            "y": 1
+          },
+          {
+            "x": 6,
+            "y": 2
+          },
+          {
+            "x": 7,
+            "y": 1
+          },
+          {
+            "x": 7,
+            "y": 2
+          },
+          {
+            "x": 8,
+            "y": 2
+          }
+        ],
+        "orderRandom": true
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 8,
+            "y": 3
+          },
+          {
+            "x": 9,
+            "y": 2
+          },
+          {
+            "x": 9,
+            "y": 3
+          },
+          {
+            "x": 10,
+            "y": 2
+          },
+          {
+            "x": 10,
+            "y": 3
+          }
+        ],
+        "orderRandom": true
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 6,
+            "y": 1
+          },
+          {
+            "x": 6,
+            "y": 2
+          },
+          {
+            "x": 7,
+            "y": 1
+          },
+          {
+            "x": 7,
+            "y": 2
+          },
+          {
+            "x": 8,
+            "y": 2
+          }
+        ],
+        "orderRandom": true
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 8,
+            "y": 3
+          },
+          {
+            "x": 9,
+            "y": 2
+          },
+          {
+            "x": 9,
+            "y": 3
+          },
+          {
+            "x": 10,
+            "y": 2
+          },
+          {
+            "x": 10,
+            "y": 3
+          }
+        ],
+        "orderRandom": true
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Footwork",
+      "Forehand",
+      "Random",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 134,
+    "name": "BH Flick, 2 Random Topspin",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 0,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 2,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 12,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 13,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 12,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 13,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Backhand",
+      "Flick",
+      "Footwork",
+      "Random"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 133,
+    "name": "FH Short Push, Random Loop",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 0,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 4,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 12,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 13,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 14,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 1
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Footwork",
+      "Forehand",
+      "Push",
+      "Random",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 132,
+    "name": "Middle FH Loop, Random Wide",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Footwork",
+      "Forehand",
+      "Random",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 131,
+    "name": "BH Short Push, BH Loop",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 0,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 2,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Backhand",
+      "Push",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 130,
+    "name": "FH Short Push, FH Loop",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 0,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 4,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Forehand",
+      "Push",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 129,
+    "name": "BH Flick, BH Drive",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 0,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 2,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Backhand",
+      "Flick"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 128,
+    "name": "FH Flick, FH Loop",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 0,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 4,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Flick",
+      "Forehand"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 127,
+    "name": "BH Loop, FH Drive",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Footwork",
+      "Transition",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 126,
+    "name": "FH Loop, BH Drive",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Footwork",
+      "Transition",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 125,
+    "name": "BH Loop, BH Drive",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Backhand",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 124,
+    "name": "FH Loop, FH Drive",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 10,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 2,
+      "skillLevel": "Intermediate"
+    },
+    "tags": [
+      "Forehand",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 147,
+    "name": "BH Flick and Topspin Random (8)",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 3,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 2,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 11,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 4,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 3,
+      "skillLevel": "Advanced"
+    },
+    "tags": [
+      "Backhand",
+      "Flick",
+      "Footwork",
+      "Random"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 146,
+    "name": "A7. 2/3 FH Loop, Random FH Smash",
+    "repeatNum": 15,
+    "repeatDelay": 5,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 2,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 2,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 9,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 2,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 2,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 2,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 2,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 7,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 2,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 2,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 2,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 10,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 2,
+        "spin": 1,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 8,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 3,
+      "skillLevel": "Advanced"
+    },
+    "tags": [
+      "Footwork",
+      "Forehand",
+      "Random",
+      "Smash"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 145,
+    "name": "Random BH Flick, BH Drive",
+    "repeatNum": 20,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 0,
+        "spin": 4,
+        "power": 3,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 2,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 0,
+        "spin": 4,
+        "power": 3,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 3,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 0,
+        "spin": 4,
+        "power": 3,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 4,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 0,
+        "spin": 4,
+        "power": 3,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 5,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 0,
+        "spin": 4,
+        "power": 3,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 0,
+        "spin": 4,
+        "power": 3,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 3,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 0,
+        "spin": 4,
+        "power": 3,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 4,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 3,
+      "skillLevel": "Advanced"
+    },
+    "tags": [
+      "Backhand",
+      "Flick",
+      "Footwork",
+      "Random"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 144,
+    "name": "A5. FH Short Push, Random Full Table Loop",
+    "repeatNum": 20,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 3,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 5,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 12,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 11,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 3,
+      "skillLevel": "Advanced"
+    },
+    "tags": [
+      "Footwork",
+      "Forehand",
+      "Push",
+      "Random",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 143,
+    "name": "FH Flip, FH 2/3 Random (5)",
+    "repeatNum": 15,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 0,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 4,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 14,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 14,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 12,
+            "y": 3
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 3,
+      "skillLevel": "Advanced"
+    },
+    "tags": [
+      "Flick",
+      "Footwork",
+      "Forehand",
+      "Random"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 142,
+    "name": "FH Short Push, FH Step-Around Loop",
+    "repeatNum": 20,
+    "repeatDelay": 1,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 5,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 3,
+      "skillLevel": "Advanced"
+    },
+    "tags": [
+      "Footwork",
+      "Forehand",
+      "Push",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 141,
+    "name": "Middle Loop, Random Wide",
+    "repeatNum": 20,
+    "repeatDelay": 2,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 4,
+        "power": 2,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      },
+      {
+        "ball": 1,
+        "spin": 1,
+        "power": 1,
+        "ballTime": 6,
+        "balls": [
+          {
+            "x": 15,
+            "y": 2
+          }
+        ],
+        "orderRandom": false
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 3,
+      "skillLevel": "Advanced"
+    },
+    "tags": [
+      "Footwork",
+      "Random",
+      "Openup"
+    ],
+    "isDefault": true
+  },
+  {
+    "id": 140,
+    "name": "Short FH or Long BH",
+    "repeatNum": 10,
+    "repeatDelay": 0,
+    "intervalTrain": 0,
+    "steps": [
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 3,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 5,
+            "y": 2
+          }
+        ],
+        "orderRandom": true
+      },
+      {
+        "ball": 1,
+        "spin": 3,
+        "power": 2,
+        "ballTime": 8,
+        "balls": [
+          {
+            "x": 11,
+            "y": 2
+          }
+        ],
+        "orderRandom": true
+      }
+    ],
+    "isFavourite": 0,
+    "skillLevel": {
+      "id": 3,
+      "skillLevel": "Advanced"
+    },
+    "tags": [
+      "Footwork",
+      "Random",
+      "Transition"
+    ],
+    "isDefault": true
+  }
+]
