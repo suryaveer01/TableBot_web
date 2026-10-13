@@ -1,7 +1,7 @@
 // Caches the app so it still opens at the table with no signal. Stale-while-revalidate: serve the
 // cached copy immediately and refresh it in the background, so a push to GitHub Pages shows up on
 // the next launch. Bump CACHE when the file list changes.
-const CACHE = 'tablebot-v1';
+const CACHE = 'tablebot-v2';
 const FILES = [
   './',
   'index.html',
@@ -9,6 +9,7 @@ const FILES = [
   'js/app.js',
   'js/protocol.js',
   'js/robot.js',
+  'js/calibration.js',
   'data/base-conf.json',
   'data/basic-trainings.json',
   'data/advanced-trainings.json',

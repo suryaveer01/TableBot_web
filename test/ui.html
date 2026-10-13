@@ -1,0 +1,41 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>ui smoke test</title>
+<pre id="out">running…</pre>
+<iframe id="app" src="../index.html" style="width:390px;height:844px"></iframe>
+<script type="module">
+// Drives the Calibrate tab in the real page. Run with test/run.sh ui.html.
+const out = [];
+const check = (name, cond) => out.push(`${cond ? 'ok  ' : 'FAIL'} ${name}`);
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+try { localStorage.removeItem('tablebot.calibration'); localStorage.removeItem('tablebot.calibUi'); } catch {}
+const frame = document.getElementById('app');
+await new Promise((r) => frame.addEventListener('load', r));
+await sleep(800);
+const d = frame.contentDocument, $ = (s) => d.querySelector(s);
+try {
+  $('.tab[data-tab=calib]').click();
+  check('calibrate tab shown', !$('#tab-calib').hidden);
+  check('grid drawn', d.querySelectorAll('#kGrid .cell').length === 15);
+  check('9-cell suggestion marked', d.querySelectorAll('#kGrid .mark').length === 6); // Normal/Topspin/Medium reaches 2 rows
+  const m1 = () => Number(d.querySelectorAll('#kFine .num')[0].textContent);
+  const before = m1();
+  $('.pad [data-a=long]').click();
+  $('.pad [data-a=long]').click();
+  check('too long lowers the top wheel', m1() === before - 2);
+  check('marked unsaved', $('#kCellSub').textContent.includes('not saved'));
+  $('#kGood').click();
+  const saved = JSON.parse(localStorage.getItem('tablebot.calibration'));
+  check('saved to browser storage', saved.good.length === 1 && saved.good[0].landarea === 13);
+  check('cell 13 green', $('#kGrid [data-c="13"]').classList.contains('good'));
+  check('cell 6 estimated', $('#kGrid [data-c="6"]').classList.contains('auto'));
+  $('#kGrid [data-c="6"]').click();
+  check('estimate applied to cell 6', $('#kFine .num').classList.contains('changed'));
+  $('#kFire').click(); // not connected: should only toast
+  check('fire without robot warns', $('#toast').textContent.includes('Connect'));
+} catch (e) { out.push(`FAIL exception: ${e.message}`); }
+try { localStorage.removeItem('tablebot.calibration'); localStorage.removeItem('tablebot.calibUi'); } catch {}
+const failed = out.filter((l) => l.startsWith('FAIL')).length;
+out.push(failed ? `\n${failed} FAILED` : `\nALL ${out.length} PASSED`);
+document.getElementById('out').textContent = out.join('\n');
+</script>

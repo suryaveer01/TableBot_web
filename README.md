@@ -36,8 +36,37 @@ requests a screen wake lock, but that may not work in every browser.
 - Settings for the idle stop command (V1/V2), the write chunk size and the delay before service
   discovery. The defaults match the Android app.
 - A connection log with a Copy button, for debugging at the table.
+- On-table calibration (the **Calibrate** tab, below).
 
-**Not included yet:** saving your own drills, the drill editors, calibration, and training history.
+**Not included yet:** saving your own drills, the drill editors, and training history.
+
+## Calibrating on the table
+
+Calibration works on one ball type, spin and power at a time.
+
+1. Put the robot where it will normally sit, and connect.
+2. On **Calibrate**, pick the ball type, spin and power, then tap a target cell.
+3. Tap **Fire test ball** and say where it landed: **Too long**, **Too short**, **Left** or
+   **Right**. Long/short moves both wheel speeds by 1, and left/right moves the side aim by 1.
+   Tick **Fire again after each adjustment** to have every tap fire the next ball.
+4. When it lands on target, tap **This cell is good** (the cell turns green).
+5. Work through the cells marked ○: columns 1, 3 and 5 of each row, up to 9 cells. The cells
+   between them are filled in from their neighbours. Even one good cell corrects the whole grid
+   for that spin and power. The other combinations keep the factory settings.
+
+**Fine-tune motor values** shows all five raw values for the cell, for changes the four
+buttons don't cover, such as spin (the top/bottom wheel balance) or elevation.
+
+Everything that fires (drills, custom drills, test balls) uses the calibrated values.
+
+Good cells are saved in the browser's storage on that phone. Clearing Bluefy's website data
+erases them, so keep a copy: **Save to file** opens the share sheet on iPhone (choose
+*Save to Files*), and **Copy** puts the calibration on the clipboard so you can paste it into
+Notes. **Load file** and **Paste** restore it. Loading replaces what's saved. A motor table
+exported from the Android app also loads: the entries that differ from factory become good
+cells.
+
+How the fill-in works is in the comment at the top of `js/calibration.js`.
 
 ### How connecting differs from the Android app
 
@@ -90,10 +119,11 @@ python3 -m http.server 8000     # then open http://localhost:8000
 Web Bluetooth only runs on HTTPS or `localhost`. Desktop Chrome and Edge support it, but Chrome on
 Linux may need `chrome://flags/#enable-experimental-web-platform-features`.
 
-To run the protocol tests (headless Chrome; nothing is installed):
+To run the tests (headless Chrome; nothing is installed):
 
 ```sh
-test/run.sh
+test/run.sh            # protocol + calibration logic
+test/run.sh ui.html    # drives the Calibrate tab in the real page
 ```
 
 The tests check the connect frame against bytes captured from a real robot, the pattern layouts
@@ -107,6 +137,7 @@ bundled data. You can also open `test/index.html` in a browser through the local
 | `index.html`, `css/style.css` | The page |
 | `js/protocol.js` | Frames, CRC, pattern encoding, response parsing, play modes. No Bluetooth or DOM code |
 | `js/robot.js` | Web Bluetooth connection, write queue, play/stop/keepalive sequence |
+| `js/calibration.js` | Good cells, estimates for the other cells, save/load. No Bluetooth or DOM code |
 | `js/app.js` | UI |
 | `data/*.json` | Motor table and bundled drills, copied from the Android app's `assets/` |
 | `sw.js` | Offline cache |

@@ -1,7 +1,8 @@
 import * as P from './protocol.js';
 import { Robot } from './robot.js';
+import * as C from './calibration.js';
 
-const APP_VERSION = '0.1.0';
+const APP_VERSION = '0.2.0';
 const $ = (id) => document.getElementById(id);
 
 // ── Persistence (per-device conveniences only; everything works without it) ──
@@ -21,7 +22,8 @@ const settings = load('settings', { chunk: P.DEFAULT_CHUNK, settleMs: 600, robot
 const custom = load('custom', { ball: 1, spin: 2, power: 2, landType: 0, cells: [8], ballTime: 9 });
 
 const robot = new Robot(settings);
-let motors = null;
+let motors = null; // factory table
+let cal = null;    // calibration on top of it — use this for anything sent to the robot
 let drills = [];
 let kindFilter = 'all';
 let countdown = null; // { timer, remaining } while a timed drill runs
@@ -154,7 +156,7 @@ function clearCountdown() {
   renderConnection();
 }
 
-const lookup = (b, s, p, cell) => motors.lookup(b, s, p, cell);
+const lookup = (b, s, p, cell) => cal.lookup(b, s, p, cell);
 
 // ── Play-mode picker (reps / ball count / timed) ─────────────────────────
 
@@ -364,7 +366,7 @@ function customDrill() {
 }
 
 $('cTest').onclick = () => {
-  const params = motors.lookup(custom.ball, custom.spin, custom.power, custom.cells[0]);
+  const params = lookup(custom.ball, custom.spin, custom.power, custom.cells[0]);
   if (!params) { toast('No motor settings for that position'); return; }
   playPayload('Test ball', P.encodeSingleBall(params, custom.ballTime), null);
 };
@@ -373,6 +375,240 @@ $('cPlay').onclick = () => {
   const d = customDrill();
   const r = P.resolvePlay(customPicker.mode, { ...customPicker, ballsPerPattern: P.ballsPerPatternBasic(d), patternTenths: P.patternTenthsBasic(d) });
   playPayload(d.name, P.encodeBasicPattern(d, lookup, { times: r.reps }), r.timedSec);
+};
+
+// ── Calibration ────────────────────────────────────────────────────────
+
+const CAL_KEY = 'tablebot.calibration';
+const calibUi = load('calibUi', { ball: 1, spin: 1, power: 2, cell: 13, autoFire: false });
+let working = null; // motor values being tuned for the selected cell
+let dirty = false;  // working differs from what is saved
+
+function loadCalibration() {
+  try {
+    const raw = localStorage.getItem(CAL_KEY);
+    if (raw) return C.Calibration.fromJSON(JSON.parse(raw), motors);
+  } catch { /* unreadable or blocked storage — start from factory */ }
+  return new C.Calibration(motors);
+}
+
+function saveCalibration() {
+  try {
+    localStorage.setItem(CAL_KEY, JSON.stringify(cal.toJSON()));
+  } catch {
+    toast('Could not save in this browser — use Save to file');
+  }
+}
+
+const calCombo = () => [calibUi.ball, calibUi.spin, calibUi.power];
+
+function resetWorking() {
+  working = C.motorValues(cal.lookup(...calCombo(), calibUi.cell));
+  dirty = false;
+}
+
+function confirmDiscard() {
+  return !dirty || confirm(`Discard the unsaved changes to cell ${calibUi.cell}?`);
+}
+
+function normaliseCalib() {
+  const spins = motors.validSpins(calibUi.ball);
+  if (!spins.has(calibUi.spin)) calibUi.spin = [...spins].sort()[0] ?? 2;
+  const powers = motors.validPowers(calibUi.ball, calibUi.spin);
+  if (!powers.has(calibUi.power)) calibUi.power = [...powers].sort()[0] ?? 2;
+  const valid = motors.validLandareas(...calCombo());
+  if (!valid.has(calibUi.cell)) calibUi.cell = [13, 8, 3].find((c) => valid.has(c)) ?? [...valid][0];
+}
+
+const SOURCE_TEXT = {
+  good: 'Marked good',
+  auto: 'Estimated from your good cells',
+  factory: 'Factory settings',
+};
+
+function renderCalib() {
+  if (!cal) return;
+  normaliseCalib();
+  save('calibUi', calibUi);
+  if (!working) resetWorking();
+  const combo = calCombo();
+  const pickCombo = (patch) => {
+    if (!confirmDiscard()) return;
+    Object.assign(calibUi, patch);
+    working = null;
+    renderCalib();
+  };
+
+  segButtons($('kBall'), P.BALL_LABELS, calibUi.ball, null, (v) => pickCombo({ ball: v }));
+  segButtons($('kSpin'), P.SPIN_LABELS, calibUi.spin, motors.validSpins(calibUi.ball), (v) => pickCombo({ spin: v }));
+  segButtons($('kPower'), P.POWER_LABELS, calibUi.power, motors.validPowers(calibUi.ball, calibUi.spin), (v) => pickCombo({ power: v }));
+
+  const suggested = C.suggestedCells(motors, ...combo);
+  let html = '';
+  for (let c = 1; c <= 15; c++) {
+    const src = cal.source(...combo, c);
+    const cls = ['cell', src === 'good' ? 'good' : src === 'auto' ? 'auto' : '', c === calibUi.cell ? 'sel' : ''].join(' ');
+    const mark = src === 'good' ? '✓' : suggested.includes(c) ? '○' : '';
+    html += `<button class="${cls}" data-c="${c}" ${src ? '' : 'disabled'}>${c}${mark ? `<span class="mark">${mark}</span>` : ''}</button>`;
+  }
+  $('kGrid').innerHTML = html;
+
+  const goodCells = cal.anchorsFor(...combo).map((a) => a.cell);
+  const good = goodCells.length;
+  const reachable = motors.validLandareas(...combo).size;
+  const done = suggested.filter((c) => goodCells.includes(c)).length;
+  $('kSummary').textContent = (good
+    ? `${good} good cell${good === 1 ? '' : 's'} (green) · the other ${reachable - good} are estimated from ${good === 1 ? 'it' : 'them'}. `
+    : 'Factory settings for this spin and power. ')
+    + (done < suggested.length
+      ? `Suggested cells (○): ${done} of ${suggested.length} done — the cells between them are then filled in.`
+      : 'All suggested cells done.');
+
+  const src = cal.source(...combo, calibUi.cell);
+  $('kCellTitle').textContent = `Cell ${calibUi.cell} · ${P.SPIN_LABELS[calibUi.spin]} · ${P.POWER_LABELS[calibUi.power]}`;
+  $('kCellSub').textContent = dirty ? `${SOURCE_TEXT[src]} · changed, not saved yet` : SOURCE_TEXT[src];
+
+  const factory = motors.lookup(...combo, calibUi.cell);
+  $('kFine').innerHTML = C.FIELDS.map((f) => `
+    <div class="fine-row">
+      <div class="name">${C.FIELD_LABELS[f]}<small>factory ${factory[f]} · range ${C.RANGES[f][0]}–${C.RANGES[f][1]}</small></div>
+      <button class="btn" data-f="${f}" data-d="-1">−</button>
+      <span class="num ${working[f] !== factory[f] ? 'changed' : ''}">${working[f]}</span>
+      <button class="btn" data-f="${f}" data-d="1">+</button>
+    </div>`).join('');
+
+  $('kAuto').checked = calibUi.autoFire;
+  $('kUndo').disabled = !dirty;
+  $('kForget').disabled = src !== 'good';
+  $('kStored').textContent = cal.count
+    ? `${cal.count} good cell${cal.count === 1 ? '' : 's'} saved in this browser. Save a file now and then — clearing Bluefy’s website data erases them.`
+    : 'Nothing saved yet — drills use the factory settings.';
+}
+
+function fireCalib() {
+  const params = { ...motors.lookup(...calCombo(), calibUi.cell), ...working };
+  playPayload(`Calibrating cell ${calibUi.cell}`, P.encodeSingleBall(params, 9), null);
+}
+
+$('kGrid').onclick = (e) => {
+  const b = e.target.closest('.cell');
+  if (!b || b.disabled || Number(b.dataset.c) === calibUi.cell || !confirmDiscard()) return;
+  calibUi.cell = Number(b.dataset.c);
+  working = null;
+  renderCalib();
+};
+
+$('kFire').onclick = fireCalib;
+
+document.querySelector('.pad').onclick = (e) => {
+  const a = e.target.closest('button')?.dataset.a;
+  if (!a) return;
+  working = C.nudge(working, a, C.xDirection(motors, ...calCombo()));
+  dirty = true;
+  renderCalib();
+  if (calibUi.autoFire) fireCalib();
+};
+
+$('kFine').onclick = (e) => {
+  const b = e.target.closest('button[data-f]');
+  if (!b) return;
+  const f = b.dataset.f;
+  const [lo, hi] = C.RANGES[f];
+  working = { ...working, [f]: Math.min(hi, Math.max(lo, working[f] + Number(b.dataset.d))) };
+  dirty = true;
+  renderCalib();
+};
+
+$('kAuto').onchange = () => { calibUi.autoFire = $('kAuto').checked; save('calibUi', calibUi); };
+
+$('kGood').onclick = () => {
+  const before = cal.anchorsFor(...calCombo()).length;
+  cal.setGood(...calCombo(), calibUi.cell, working);
+  saveCalibration();
+  resetWorking();
+  renderCalib();
+  toast(before ? `Cell ${calibUi.cell} saved — estimates updated` : `Cell ${calibUi.cell} saved — the rest of the grid now follows it`);
+};
+
+$('kUndo').onclick = () => { resetWorking(); renderCalib(); };
+
+$('kForget').onclick = () => {
+  if (!confirm(`Forget cell ${calibUi.cell}?`)) return;
+  cal.forget(...calCombo(), calibUi.cell);
+  saveCalibration();
+  resetWorking();
+  renderCalib();
+};
+
+$('kResetCombo').onclick = () => {
+  if (!confirm(`Forget every good cell for ${P.BALL_LABELS[calibUi.ball]} · ${P.SPIN_LABELS[calibUi.spin]} · ${P.POWER_LABELS[calibUi.power]}?`)) return;
+  cal.forgetCombo(...calCombo());
+  saveCalibration();
+  resetWorking();
+  renderCalib();
+};
+
+$('kResetAll').onclick = () => {
+  if (!confirm('Forget ALL calibration and go back to factory settings?')) return;
+  cal.forgetAll();
+  saveCalibration();
+  resetWorking();
+  renderCalib();
+};
+
+const calibText = () => JSON.stringify(cal.toJSON(), null, 2);
+
+$('kExport').onclick = async () => {
+  const name = `tablebot-calibration-${new Date().toISOString().slice(0, 10)}.json`;
+  const file = new File([calibText()], name, { type: 'application/json' });
+  // On iPhone the share sheet ("Save to Files") is the reliable way to get a file out.
+  if (navigator.canShare?.({ files: [file] })) {
+    try { await navigator.share({ files: [file] }); return; } catch (e) { if (e.name === 'AbortError') return; }
+  }
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(file);
+  a.download = name;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 10_000);
+};
+
+$('kCopy').onclick = async () => {
+  try {
+    await navigator.clipboard.writeText(calibText());
+    toast('Calibration copied — paste it into Notes to keep it');
+  } catch {
+    toast('Copy failed in this browser — use Save to file');
+  }
+};
+
+function importCalibration(text) {
+  let next;
+  try {
+    next = C.Calibration.fromJSON(JSON.parse(text), motors);
+  } catch (e) {
+    toast(`Not loaded: ${e instanceof SyntaxError ? 'not valid JSON' : e.message}`);
+    return;
+  }
+  if (cal.count && !confirm(`Replace your ${cal.count} saved good cells with the ${next.count} in this file?`)) return;
+  cal = next;
+  saveCalibration();
+  resetWorking();
+  renderCalib();
+  toast(`Loaded ${cal.count} good cell${cal.count === 1 ? '' : 's'}`);
+}
+
+$('kImport').onclick = () => $('kFile').click();
+$('kFile').onchange = async () => {
+  const f = $('kFile').files[0];
+  $('kFile').value = '';
+  if (f) importCalibration(await f.text());
+};
+
+$('kPaste').onclick = async () => {
+  let text = null;
+  try { text = await navigator.clipboard.readText(); } catch { /* not allowed — ask instead */ }
+  if (!text) text = prompt('Paste the calibration text');
+  if (text) importCalibration(text);
 };
 
 // ── Settings ───────────────────────────────────────────────────────────
@@ -401,8 +637,9 @@ document.querySelector('.tabs').onclick = (e) => {
   const tab = e.target.closest('.tab')?.dataset.tab;
   if (!tab) return;
   document.querySelectorAll('.tab').forEach((t) => t.classList.toggle('active', t.dataset.tab === tab));
-  for (const name of ['drills', 'custom', 'settings']) $(`tab-${name}`).hidden = name !== tab;
+  for (const name of ['drills', 'custom', 'calib', 'settings']) $(`tab-${name}`).hidden = name !== tab;
   if (tab === 'settings') renderLog();
+  if (tab === 'calib') renderCalib();
 };
 
 // ── Helpers ────────────────────────────────────────────────────────────
@@ -426,6 +663,7 @@ async function init() {
   try {
     const [base, basic, advanced] = await Promise.all([get('base-conf.json'), get('basic-trainings.json'), get('advanced-trainings.json')]);
     motors = new P.MotorTable(base);
+    cal = loadCalibration();
     drills = [
       ...basic.map((d) => ({ ...d, kind: 'basic' })),
       ...advanced.filter((d) => d.steps?.length).map((d) => ({ ...d, kind: 'advanced' })),
@@ -438,6 +676,7 @@ async function init() {
   renderDrillList();
   customPicker = playModePicker($('cPlayMode'), { reps: 20 });
   renderCustom();
+  renderCalib();
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js').catch(() => { /* offline cache is a bonus, not a requirement */ });

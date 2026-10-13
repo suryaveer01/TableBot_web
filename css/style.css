@@ -153,3 +153,30 @@ input[type=number] {
   background: var(--text); color: var(--bg); padding: 12px 14px; border-radius: 10px; font-size: 15px; text-align: center;
 }
 .toast[hidden] { display: none; }
+
+/* ── Calibrate ── */
+.tabs .tab { padding: 10px 4px; font-size: 15px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; margin-top: 14px; }
+.card-title { font-weight: 700; font-size: 17px; }
+.btn.good { background: var(--ok); border-color: var(--ok); color: #fff; }
+.pad {
+  display: grid; gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "long long" "left right" "short short";
+}
+.pad .btn { min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.pad .btn small { font-weight: 400; font-size: 12px; color: var(--muted); }
+.check { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 15px; }
+.check input { width: 20px; height: 20px; accent-color: var(--accent); }
+.fine { margin-top: 12px; }
+.fine summary { font-weight: 600; cursor: pointer; padding: 6px 0; }
+.fine-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-top: 1px solid var(--line); }
+.fine-row .name { flex: 1; font-size: 14px; }
+.fine-row .name small { display: block; color: var(--muted); font-size: 12px; }
+.fine-row .num { width: 34px; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+.fine-row .changed { color: var(--accent); }
+.fine-row .btn { min-width: 44px; padding: 6px; }
+.cell.good { background: var(--ok); }
+.cell.auto { background: rgba(255,255,255,.28); }
+.cell.sel { outline: 3px solid #fff; outline-offset: -3px; }
+.cell .mark { position: absolute; top: 2px; right: 5px; font-size: 11px; }

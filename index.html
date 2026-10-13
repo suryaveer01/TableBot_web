@@ -29,6 +29,7 @@
   <nav class="tabs">
     <button class="tab active" data-tab="drills">Drills</button>
     <button class="tab" data-tab="custom">Custom</button>
+    <button class="tab" data-tab="calib">Calibrate</button>
     <button class="tab" data-tab="settings">Settings</button>
   </nav>
 
@@ -67,6 +68,66 @@
       <div class="row">
         <button id="cTest" class="btn">Test one ball</button>
         <button id="cPlay" class="btn primary grow">Play</button>
+      </div>
+    </section>
+
+    <!-- On-table calibration -->
+    <section id="tab-calib" class="panel" hidden>
+      <p class="hint">Pick the shot, pick a target cell, fire, and say where it landed. When it lands
+        on target, tap <b>This cell is good</b>. Work through the cells marked ○ (columns 1, 3 and 5
+        of each row); the cells between them are filled in. Even one good cell corrects the whole
+        grid for this spin and power.</p>
+      <label class="lbl">Ball</label>
+      <div class="seg" id="kBall"></div>
+      <label class="lbl">Spin</label>
+      <div class="seg wrap" id="kSpin"></div>
+      <label class="lbl">Power</label>
+      <div class="seg" id="kPower"></div>
+      <label class="lbl">Target</label>
+      <div class="grid-wrap">
+        <div class="net">NET · robot side</div>
+        <div id="kGrid" class="grid"></div>
+        <div class="net">you</div>
+      </div>
+      <p class="hint" id="kSummary"></p>
+
+      <div class="card">
+        <div class="card-title" id="kCellTitle"></div>
+        <div class="hint" id="kCellSub"></div>
+        <button id="kFire" class="btn primary block">Fire test ball</button>
+        <label class="lbl">Where did it land?</label>
+        <div class="pad">
+          <button class="btn" data-a="long" style="grid-area: long">Too long<small>past the target</small></button>
+          <button class="btn" data-a="left" style="grid-area: left">◀ Left<small>of the target</small></button>
+          <button class="btn" data-a="right" style="grid-area: right">Right ▶<small>of the target</small></button>
+          <button class="btn" data-a="short" style="grid-area: short">Too short<small>in front of it</small></button>
+        </div>
+        <label class="check"><input type="checkbox" id="kAuto"> Fire again after each adjustment</label>
+        <details class="fine">
+          <summary>Fine-tune motor values</summary>
+          <div id="kFine"></div>
+        </details>
+        <button id="kGood" class="btn good block">✓ This cell is good</button>
+        <div class="row">
+          <button id="kUndo" class="btn grow">Undo changes</button>
+          <button id="kForget" class="btn grow">Forget this cell</button>
+        </div>
+      </div>
+
+      <label class="lbl">Saved calibration</label>
+      <p class="hint" id="kStored"></p>
+      <div class="row">
+        <button id="kExport" class="btn grow">Save to file</button>
+        <button id="kCopy" class="btn grow">Copy</button>
+      </div>
+      <div class="row">
+        <button id="kImport" class="btn grow">Load file</button>
+        <button id="kPaste" class="btn grow">Paste</button>
+        <input id="kFile" type="file" accept=".json,application/json" hidden>
+      </div>
+      <div class="row">
+        <button id="kResetCombo" class="btn grow">Reset this spin/power</button>
+        <button id="kResetAll" class="btn grow">Reset all</button>
       </div>
     </section>
 

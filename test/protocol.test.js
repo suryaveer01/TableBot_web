@@ -1,6 +1,7 @@
 // Protocol tests. Open test/index.html through any local web server, or run test/run.sh.
 // Vectors marked "HCI" are bytes captured from a real robot / the original Joola app.
 import * as P from '../js/protocol.js';
+import * as C from '../js/calibration.js';
 
 const results = [];
 function test(name, fn) {
@@ -127,6 +128,77 @@ test(`bundled data: ${base.length} motor entries, ${basic.length} basic, ${advan
   for (const d of advanced) for (const s of d.steps) for (const p of s.balls) if (!motors.lookup(s.ball, s.spin, s.power, p.x)) missing.push(`${d.name}@${p.x}`);
   if (missing.length) results.push(`note ${missing.length} drill positions have no base-conf entry (sent as zeros, same as Android): ${missing.slice(0, 5).join(', ')}…`);
   eq(base.length, 465);
+});
+
+
+// ── Calibration ──
+const combo = [1, 1, 2]; // Normal · Topspin · Medium: rows 2–3 only (cells 6–15)
+const fac = (c) => motors.lookup(...combo, c);
+const shifted = (c, d) => Object.fromEntries(C.FIELDS.map((f) => [f, fac(c)[f] + (d[f] ?? 0)]));
+
+test('calibration: nothing saved -> factory values', () => {
+  const cal = new C.Calibration(motors);
+  eq(cal.lookup(...combo, 13), fac(13));
+  eq(cal.source(...combo, 13), 'factory');
+  eq(cal.source(...combo, 3), null, 'unreachable cell');
+});
+
+test('calibration: one good cell shifts every cell by its correction', () => {
+  const cal = new C.Calibration(motors);
+  cal.setGood(...combo, 13, shifted(13, { m1speed: -2, m2speed: -1, xaxis: 1 }));
+  eq(cal.source(...combo, 13), 'good');
+  eq(cal.source(...combo, 6), 'auto');
+  for (const c of [6, 8, 10, 11, 15]) {
+    const v = cal.lookup(...combo, c);
+    eq([v.m1speed - fac(c).m1speed, v.m2speed - fac(c).m2speed, v.xaxis - fac(c).xaxis, v.yaxis - fac(c).yaxis], [-2, -1, 1, 0], `cell ${c}`);
+  }
+});
+
+test('calibration: middle cells blend between good cells in their row', () => {
+  const cal = new C.Calibration(motors);
+  cal.setGood(...combo, 11, shifted(11, { xaxis: 4 }));
+  cal.setGood(...combo, 13, shifted(13, { xaxis: 2 }));
+  cal.setGood(...combo, 15, shifted(15, { xaxis: 0 }));
+  eq(cal.lookup(...combo, 12).xaxis - fac(12).xaxis, 3);
+  eq(cal.lookup(...combo, 14).xaxis - fac(14).xaxis, 1);
+});
+
+test('calibration: two cells in one row fit a column slope and no depth slope', () => {
+  const cal = new C.Calibration(motors);
+  cal.setGood(...combo, 11, shifted(11, { m1speed: -2, xaxis: 4 }));
+  cal.setGood(...combo, 15, shifted(15, { m1speed: -2, xaxis: 0 }));
+  const d = (c, f) => cal.lookup(...combo, c)[f] - fac(c)[f];
+  eq([d(6, 'xaxis'), d(8, 'xaxis'), d(10, 'xaxis')], [4, 2, 0], 'row above follows the column trend');
+  eq([d(6, 'm1speed'), d(10, 'm1speed')], [-2, -2]);
+});
+
+test('calibration: 9 suggested cells; values stay inside slider ranges', () => {
+  eq(C.suggestedCells(motors, ...combo), [6, 8, 10, 11, 13, 15]);
+  eq(C.suggestedCells(motors, 1, 2, 3), [1, 3, 5, 6, 8, 10, 11, 13, 15]);
+  const cal = new C.Calibration(motors);
+  cal.setGood(...combo, 13, shifted(13, { m1speed: 99, xaxis: -99 }));
+  eq([cal.lookup(...combo, 13).m1speed, cal.lookup(...combo, 13).xaxis], [36, 0]);
+});
+
+test('calibration: save/load round trip, and Android motor-table import', () => {
+  const cal = new C.Calibration(motors);
+  cal.setGood(...combo, 13, shifted(13, { yaxis: 2 }));
+  const back = C.Calibration.fromJSON(JSON.parse(JSON.stringify(cal.toJSON())), motors);
+  eq(back.anchors, cal.anchors);
+  const android = base.map((e) => (e.ball === 1 && e.spin === 1 && e.power === 2 && e.landarea === 8 ? { ...e, xaxis: e.xaxis + 1 } : e));
+  eq(Object.keys(C.Calibration.fromJSON(android, motors).anchors), ['1/1/2/8']);
+  let threw = false;
+  try { C.Calibration.fromJSON({ hello: 1 }, motors); } catch { threw = true; }
+  eq(threw, true, 'rejects other JSON');
+});
+
+test('calibration: nudges', () => {
+  const v = { m1speed: 20, m2speed: 0, xaxis: 20, yaxis: 16, zaxis: 10 };
+  eq(C.nudge(v, 'long'), { ...v, m1speed: 19 }, 'idle wheel stays at 0');
+  eq(C.nudge(v, 'short'), { ...v, m1speed: 21 });
+  eq(C.xDirection(motors, ...combo), 1);
+  eq(C.nudge(v, 'left', 1).xaxis, 21);
+  eq(C.nudge(v, 'right', 1).xaxis, 19);
 });
 
 const failed = results.filter((r) => r.startsWith('FAIL')).length;
